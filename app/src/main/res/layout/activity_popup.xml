@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/marmorbackground"
+    tools:context="com.example.micka.demosalefinder.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <TextView
+        android:id="@+id/background"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#cccccc" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/background"
+        android:layout_alignStart="@+id/background"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="32dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:onClick="onExitClick"
+        android:text="Avbryt"
+        android:textAllCaps="false"
+        android:textColor="#404040"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/exit"
+        android:layout_alignBottom="@+id/exit"
+        android:layout_alignEnd="@+id/background"
+        android:layout_marginEnd="28dp"
+        android:background="#ffffff"
+        android:text="Ja"
+        android:textAllCaps="false"
+        android:textColor="#404040"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="onDeleteClick"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

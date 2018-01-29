@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/marmorbackground"
+    tools:context="com.example.micka.demosalefinder.Member">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="175dp"
+            android:layout_above="@+id/warningFirstName"
+            android:layout_alignStart="@+id/createMemberButton"
+            app:srcCompat="@drawable/logo" />
+
+        <Button
+            android:id="@+id/createMemberButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:background="#ffffff"
+            android:onClick="createAccountOnClick"
+            android:clickable="true"
+            android:text="Skapa konto"
+            android:textColor="#404040"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+        <EditText
+            android:id="@+id/createFirstName"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/lastNameTitle"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="15"
+            android:textColor="#b3b3b3"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/createLastName"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/createEmailTitle"
+            android:layout_alignStart="@+id/createFirstName"
+            android:background="#ffffff"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:textColor="#b3b3b3"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/createEmail"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/createPasswordTitle"
+            android:layout_alignStart="@+id/createLastName"
+            android:background="#ffffff"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:textColor="#b3b3b3"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/createPassword"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/createMemberButton"
+            android:layout_alignStart="@+id/createEmail"
+            android:layout_marginBottom="17dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:textColor="#b3b3b3"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/firstNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/createFirstName"
+            android:layout_alignStart="@+id/createFirstName"
+            android:layout_marginBottom="50dp"
+            android:text="Förnamn"
+            android:textColor="#404040"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lastNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/createLastName"
+            android:layout_alignStart="@+id/createLastName"
+            android:layout_marginBottom="53dp"
+            android:text="Efternamn"
+            android:textColor="#404040"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/createEmailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/createEmail"
+            android:layout_alignStart="@+id/createEmail"
+            android:layout_marginBottom="52dp"
+            android:text="Email"
+            android:textColor="#404040"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/createPasswordTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/warningPassword"
+            android:layout_alignBottom="@+id/warningPassword"
+            android:layout_alignStart="@+id/createPassword"
+            android:text="Lösenord"
+            android:textColor="#404040"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/warningFirstName"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_alignBaseline="@+id/firstNameTitle"
+            android:layout_alignBottom="@+id/firstNameTitle"
+            android:layout_toEndOf="@+id/lastNameTitle"
+            android:text="Ange förnamn"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/warningLastName"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_alignBaseline="@+id/lastNameTitle"
+            android:layout_alignBottom="@+id/lastNameTitle"
+            android:layout_alignEnd="@+id/createLastName"
+            android:layout_marginEnd="11dp"
+            android:text="Ange efternamn"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/warningEmail"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_alignBaseline="@+id/createEmailTitle"
+            android:layout_alignBottom="@+id/createEmailTitle"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/createEmailTitle"
+            android:text="Ange email"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/warningPassword"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/createPassword"
+            android:layout_toEndOf="@+id/lastNameTitle"
+            android:text="Ange lösenord"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:onClick="backAccountOnClick"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/back"
+            tools:ignore="OnClick" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

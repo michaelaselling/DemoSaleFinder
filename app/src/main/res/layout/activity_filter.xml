@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/marmorbackground"
+    tools:context="com.example.micka.demosalefinder.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/clothesSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="43dp"
+            android:layout_toEndOf="@+id/backButton"
+            app:srcCompat="@drawable/selected" />
+
+        <ImageView
+            android:id="@+id/shoesSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/clothesSelected"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/selected" />
+
+        <ImageView
+            android:id="@+id/electronicsSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleShoptype"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/shoesSelected"
+            app:srcCompat="@drawable/selected" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="175dp"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:src="@drawable/back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/titleShoptype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/shoesSelected"
+            android:layout_centerHorizontal="true"
+            android:text="Kategori"
+            android:textColor="#404040"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/clothesSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/clothesSelected"
+            android:layout_alignEnd="@+id/clothesSelected"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:onClick="clothesOnClick"
+            app:srcCompat="@drawable/clothessymbol"
+            tools:ignore="OnClick" />
+
+        <ImageView
+            android:id="@+id/shoesSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/clothesSymbol"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:onClick="shoesOnClick"
+            app:srcCompat="@drawable/shoessymbol"
+            tools:ignore="OnClick" />
+
+        <ImageView
+            android:id="@+id/electronicsSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/electronicsSelected"
+            android:layout_alignTop="@+id/clothesSymbol"
+            android:layout_marginEnd="21dp"
+            android:clickable="true"
+            android:onClick="electronicsOnClick"
+            app:srcCompat="@drawable/electronicssymbol"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/titleSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shoesSelected"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:text="Rea"
+            android:textColor="#404040"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/logo"
+            android:layout_marginBottom="13dp"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:onClick="onFilterClick"
+            android:text="FILTRERA"
+            android:textColor="#404040"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/clearFilter"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/logo"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:onClick="onClearFilterClick"
+            android:text="Rensa filter"
+            android:textAllCaps="false"
+            android:textColor="#404040"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/clearFilter"
+            android:layout_alignBottom="@+id/clearFilter"
+            android:layout_toEndOf="@+id/clothesSelected"
+            android:text="FILTRERA"
+            android:textColor="#404040"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/sale"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filterButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="36dp"
+            android:clickable="true"
+            android:max="7"
+            android:onClick="seekbarOnClick"
+            android:progress="0"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/minSaleProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sale"
+            android:layout_alignStart="@+id/shoesSymbol"
+            android:text="0-"
+            android:textColor="#404040"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/saleProgress"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/minSaleProgress"
+            android:layout_alignBottom="@+id/minSaleProgress"
+            android:layout_toEndOf="@+id/minSaleProgress"
+            android:textColor="#404040"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
